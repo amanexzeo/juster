@@ -1,25 +1,6 @@
-@()(implicit request: RequestHeader, messages: Messages, wjAssets: WebJarAssets)
-@helper.base {
-  <link href="@routes.Assets.versioned("styles/main.css")" rel="stylesheet">
-  <link href="@routes.Assets.versioned("styles/hello.css")" rel="stylesheet">
-} {
-  <section class="row">
-    <div class="columns small-12" id="content">
-      <h1>@Messages("homecontroller.index.top")</h1>
-      <p><a href="#" data-open="modal">@Messages("homecontroller.index.openModal")</a></p>
-    </div>
-  </section>
 
-  <div class="reveal" id="modal" data-reveal>
-    <h2>@Messages("homecontroller.index.modal.title")</h2>
-    <p>@Messages("homecontroller.index.modal.messages")</p>
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  </div>
-
-  <script src="@routes.WebJarAssets.at(wjAssets.locate("jquery.min.js"))"></script>
-  <script src="@routes.WebJarAssets.at(wjAssets.locate("foundation.min.js"))"></script>
-  <script src="@routes.Assets.versioned("scripts/main.js")"></script>
-  <script src="@routes.Assets.versioned("scripts/hello.js")"></script>
+@main("juster") {
 }
+@header()
+@content()
+@footer()

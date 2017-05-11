@@ -25,4 +25,8 @@ class HomeController @Inject()(
     Ok(views.html.index())
   }
 
+  def help = Action { implicit request =>
+    Ok(views.html.help())
+  }
+
 }

@@ -4,6 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+GET     /blog                       controllers.HomeController.index
+GET     /help                       controllers.HomeController.help
 
 # Map static resources from the web jars to the /assets/lib URL path
 GET     /assets/lib/*file           controllers.WebJarAssets.at(file)
